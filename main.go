@@ -26,24 +26,17 @@ func main() {
 	printf("Your BMI is: %.1f\n", total_bmi)
 
 	// Now, for the moment of truth
-	// For Underweight
-	if total_bmi < 18.5 {
+	if total_bmi < 18.5 { // For Underweight
 		print("FINDINGS: You are underweight, please consult your doctor.\n")
-	}
-	// For Normal
-	else if total_bmi >= 18.5 {
+	} else if total_bmi >= 18.5 { // For Normal
 		if total_bmi <= 29.9 {
 			print("FINDINGS: You are in a normal state, continue live healthy.\n")
 		}
-	} 
-	// For Overweight
-	else if total_bmi >= 30.0 {
+	} else if total_bmi >= 30.0 { // For Overweight
 		if total_bmi > 30.0 {
 			print("FINDINGS: You are overweight/obese, please consult your doctor.\n")
 		}
-	} 
-	// If something weird happens
-	else {
+	} else { // If something weird happens
 		print("Unhandled exception: %.1f: Cannot interpret BMI count.\n", total_bmi)
 	}
 }
